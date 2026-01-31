@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookies — Web4All</title>
+  <meta name="description" content="Informations sur l’utilisation des cookies et traceurs sur Web4All.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Logo Web4All">
+        <div class="title">
+          <strong>Web4All</strong>
+          <span>Stages & alternances</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Offres</a>
+        <a href="publier.html">Publier une offre</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 style="margin:0 0 10px;">Cookies & traceurs</h1>
+      <section class="card">
+        <h2 style="margin:0 0 10px; font-size:18px;">Ce que fait la maquette</h2>
+        <p>
+          Cette maquette utilise un stockage de préférence pour mémoriser que tu as fermé le bandeau.
+          Aucun outil publicitaire / analytics n’est intégré dans le code fourni.
+        </p>
+
+        <hr class="sep">
+
+        <h2 style="margin:0 0 10px; font-size:18px;">Règles générales</h2>
+        <p>
+          La CNIL rappelle que certains traceurs nécessitent une information et un consentement préalable,
+          et que d’autres peuvent être dispensés selon leur finalité (ex : strictement nécessaires).
+        </p>
+
+        <p class="help">
+          À adapter selon les traceurs réels que vous utiliserez (mesure d’audience, vidéos, maps, etc.).
+        </p>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cookies.html" aria-current="page">Cookies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p style="margin:10px 0 0;">© <span id="year"></span> Web4All</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

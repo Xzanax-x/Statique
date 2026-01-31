@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Web4All — Offres de stage et d’alternance</title>
+  <meta name="description" content="Plateforme Web4All : trouvez une offre de stage ou d’alternance, et publiez une annonce en quelques minutes.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Logo Web4All">
+        <div class="title">
+          <strong>Web4All</strong>
+          <span>Stages & alternances</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="offres.html">Offres</a>
+        <a href="publier.html">Publier une offre</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Un site simple, moderne, et lisible sur mobile.</h1>
+          <p>
+            Objectif : permettre aux candidats de trouver une offre rapidement, et aux recruteurs de publier une annonce
+            via un formulaire clair.
+          </p>
+
+          <div class="actions">
+            <a class="btn primary" href="offres.html">Voir les offres</a>
+            <a class="btn" href="publier.html">Publier une offre</a>
+            <a class="btn danger" href="mentions-legales.html">Mentions légales</a>
+          </div>
+
+          <hr class="sep">
+
+          <span class="badge">Sprint 1 : maquette statique</span>
+          <span class="badge">Responsive</span>
+          <span class="badge">SEO de base</span>
+        </div>
+
+        <aside class="card" aria-label="Résumé">
+          <h3>Ce que le client veut corriger</h3>
+          <p>✅ Mentions légales + infos cookies</p>
+          <p>✅ Mise en page qui ne se superpose pas</p>
+          <p>✅ Site trouvable (bases SEO + sitemap/robots)</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Fonctionnalités</h2>
+        <div class="grid cols-3">
+          <article class="card">
+            <h3>Catalogue d’offres</h3>
+            <p>Liste claire, tags (stage / alternance), infos essentielles.</p>
+          </article>
+          <article class="card">
+            <h3>Publication par formulaire</h3>
+            <p>Champs propres + validation HTML5 (obligatoire, e-mail, etc.).</p>
+          </article>
+          <article class="card">
+            <h3>Pages légales</h3>
+            <p>Mentions légales + page cookies + bandeau d’info.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links" aria-label="Liens de pied de page">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p style="margin:10px 0 0;">© <span id="year"></span> Web4All — maquette statique.</p>
+    </div>
+  </footer>
+
+  <!-- Bandeau cookies (info/consentement basique) -->
+  <div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Information cookies">
+    <p>
+      On utilise seulement des traceurs nécessaires (ex : mémoriser ton choix). Pour en savoir plus : <a href="cookies.html">Cookies</a>.
+    </p>
+    <div class="cookie-actions">
+      <button class="btn primary" id="cookieOk" type="button">OK</button>
+      <a class="btn" href="cookies.html">Détails</a>
+    </div>
+  </div>
+
+  <script>
+    // Année footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Stockage du choix dans localStorage (préférence)
+    const banner = document.getElementById("cookieBanner");
+    const okBtn = document.getElementById("cookieOk");
+    const key = "web4all_cookie_ack";
+
+    if (!localStorage.getItem(key)) banner.classList.add("show");
+    okBtn.addEventListener("click", () => {
+      localStorage.setItem(key, "1");
+      banner.classList.remove("show");
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Publier une offre — Web4All</title>
+  <meta name="description" content="Publiez une offre de stage ou d’alternance via un formulaire simple.">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="images/logo.png" alt="Logo Web4All">
+        <div class="title">
+          <strong>Web4All</strong>
+          <span>Stages & alternances</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="index.html">Accueil</a>
+        <a href="offres.html">Offres</a>
+        <a href="publier.html" aria-current="page">Publier une offre</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <h1 style="margin:0 0 10px;">Publier une offre</h1>
+      <p style="margin:0 0 16px; color:var(--muted);">
+        Maquette statique : le formulaire est prêt côté HTML. L’envoi réel dépendra de l’hébergement (backend / service de formulaire).
+      </p>
+
+      <div class="grid cols-2">
+        <section class="card">
+          <h2 style="margin:0 0 10px; font-size:18px;">Formulaire</h2>
+
+          <form action="#" method="post">
+            <div class="field">
+              <label for="type">Type d’offre</label>
+              <select id="type" name="type" required>
+                <option value="">— Choisir —</option>
+                <option value="stage">Stage</option>
+                <option value="alternance">Alternance</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="titre">Intitulé du poste</label>
+              <input id="titre" name="titre" type="text" required maxlength="80" placeholder="Ex : Assistant RH">
+            </div>
+
+            <div class="field">
+              <label for="entreprise">Entreprise</label>
+              <input id="entreprise" name="entreprise" type="text" required maxlength="80" placeholder="Nom de l’entreprise">
+            </div>
+
+            <div class="field">
+              <label for="lieu">Lieu</label>
+              <input id="lieu" name="lieu" type="text" required maxlength="60" placeholder="Ville">
+            </div>
+
+            <div class="field">
+              <label for="debut">Date de début</label>
+              <input id="debut" name="debut" type="date">
+              <div class="help">Optionnel (utile pour filtrer ensuite).</div>
+            </div>
+
+            <div class="field">
+              <label for="duree">Durée</label>
+              <input id="duree" name="duree" type="text" required maxlength="40" placeholder="Ex : 6 mois / 2 ans">
+            </div>
+
+            <div class="field">
+              <label for="desc">Description</label>
+              <textarea id="desc" name="desc" required maxlength="2000" placeholder="Missions, profil, horaires, conditions…"></textarea>
+            </div>
+
+            <div class="field">
+              <label for="email">Email de contact</label>
+              <input id="email" name="email" type="email" required placeholder="contact@entreprise.fr">
+            </div>
+
+            <div class="field">
+              <label>
+                <input type="checkbox" name="rgpd" required>
+                Je confirme être autorisé(e) à publier cette annonce et j’accepte la politique de confidentialité.
+              </label>
+              <div class="help">À relier à tes pages légales / cookies selon le contenu réel du site.</div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Envoyer</button>
+              <a class="btn" href="offres.html">Retour aux offres</a>
+            </div>
+          </form>
+        </section>
+
+        <aside class="card">
+          <h2 style="margin:0 0 10px; font-size:18px;">Qualité attendue</h2>
+          <p>• HTML sémantique (structure claire, titres cohérents).</p>
+          <p>• Responsive : pas de blocs qui se chevauchent (flex-wrap + grid + breakpoints).</p>
+          <p>• Validations W3C : HTML + CSS.</p>
+          <p>• SEO : meta description, sitemap.xml, robots.txt.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="cookies.html">Cookies</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <p style="margin:10px 0 0;">© <span id="year"></span> Web4All</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
